@@ -1,0 +1,259 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { asset } from '../config/site';
+import {
+  ArrowUpLeft, Check, ChevronDown, CirclePlay, Clock3, CloudDownload, Download,
+  Film, Github, Globe2, History, Library, Menu, Moon, Play, Search, Send,
+  Settings2, ShieldCheck, Smartphone, Sparkles, Star, Sun, Tv, Users, WifiOff,
+  Zap
+} from 'lucide-astro';
+---
+<BaseLayout>
+<header class="site-header" id="home">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#home" aria-label="CineStream">
+      <img src={asset('logo.svg')} alt="CineStream" width="190" height="44" loading="eager" />
+    </a>
+    <nav class="desktop-nav" aria-label="Primary">
+      <a href="#home" data-i18n="home">الرئيسية</a>
+      <a href="#features" data-i18n="features">المميزات</a>
+      <a href="#experience" data-i18n="experience">تجربة التطبيق</a>
+      <a href="#download" data-i18n="download">تحميل</a>
+      <a href="#faq" data-i18n="faq">الأسئلة الشائعة</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn" id="theme-btn" type="button" aria-label="Theme"><Sun class="theme-sun" size={17}/><Moon class="theme-moon" size={17}/></button>
+      <button class="lang-btn" id="lang-btn" type="button">EN</button>
+      <a href="#download" class="btn btn-primary nav-download"><Download size={16}/><span data-i18n="downloadApp">تحميل التطبيق</span></a>
+      <button class="menu-btn" id="menu-btn" type="button" aria-label="Menu"><Menu size={20}/></button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobile-menu" hidden>
+    <nav class="wrap">
+      <a href="#home" data-i18n="home">الرئيسية</a>
+      <a href="#features" data-i18n="features">المميزات</a>
+      <a href="#experience" data-i18n="experience">تجربة التطبيق</a>
+      <a href="#download" data-i18n="download">تحميل</a>
+      <a href="#faq" data-i18n="faq">الأسئلة الشائعة</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero-bg"></div>
+  <div class="hero-shade"></div>
+  <div class="hero-grid"></div>
+  <div class="glow glow-1"></div><div class="glow glow-2"></div>
+  <div class="wrap hero-inner">
+    <div class="hero-copy">
+      <div class="eyebrow-pill"><span class="pulse-dot"></span><span data-i18n="heroKicker">تجربة سينمائية مبنية حول المحتوى</span></div>
+      <h1 id="hero-title">Cine<span>Stream</span></h1>
+      <h2 data-i18n="heroTitle">عالم الترفيه بين يديك</h2>
+      <p data-i18n="heroText">اكتشف الأفلام والمسلسلات والأنمي، ابحث عن ما تريد، اختر المصدر والجودة، واحفظ ما تحبه داخل تجربة Android واحدة.</p>
+      <div class="hero-actions">
+        <a href="#download" class="btn btn-primary btn-lg"><Download size={18}/><span data-i18n="downloadApp">تحميل التطبيق الآن</span></a>
+        <a href="#experience" class="btn btn-glass btn-lg"><CirclePlay size={18}/><span data-i18n="explore">استكشف التجربة</span></a>
+      </div>
+      <div class="hero-proof">
+        <span><Film size={15}/> <b data-i18n="pillMovies">أفلام</b></span>
+        <span><Tv size={15}/> <b data-i18n="pillSeries">مسلسلات</b></span>
+        <span><Star size={15}/> <b data-i18n="pillAnime">أنمي</b></span>
+        <span><Smartphone size={15}/> <b data-i18n="pillAndroid">Android</b></span>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <div class="visual-aura"></div>
+      <div class="hero-art-art">
+        <div class="art-card art-card-back" style={`background-image:url(${asset('app-assets/cinema.jpg')})`}></div>
+        <div class="art-card art-card-mid" style={`background-image:url(${asset('app-assets/studio.jpg')})`}></div>
+        <div class="phone phone-back">
+          <div class="phone-notch"></div>
+          <div class="phone-ui-header"><b>Cine<span>Stream</span></b><Search size={11}/><Menu size={11}/></div>
+          <div class="phone-tabs"><b>الأفلام</b><span>المسلسلات</span><span>الأنمي</span></div>
+          <div class="phone-feature" style={`background-image:url(${asset('app-assets/app.jpg')})`}></div>
+          <div class="phone-section-title">رائج الآن</div><div class="poster-row"><i></i><i></i><i></i><i></i></div>
+          <div class="phone-section-title">أحدث الإصدارات</div><div class="poster-row small"><i></i><i></i><i></i><i></i></div>
+        </div>
+        <div class="phone phone-main">
+          <div class="phone-notch"></div>
+          <div class="phone-ui-header"><b>Cine<span>Stream</span></b><Search size={11}/><span class="ui-dot"></span></div>
+          <div class="phone-tabs"><b>الرئيسية</b><span>الأفلام</span><span>المسلسلات</span><span>الأنمي</span></div>
+          <div class="phone-feature" style={`background-image:url(${asset('app-assets/app.jpg')})`}>
+            <div class="phone-feature-overlay"><strong>The Last of Us</strong><small>2023 · TV-MA · 4K</small><button>مشاهدة الآن</button></div>
+          </div>
+          <div class="phone-section-title">متابعة المشاهدة</div><div class="progress-row"><i></i><span></span></div>
+          <div class="phone-section-title">رائج الآن</div><div class="poster-row"><i></i><i></i><i></i></div>
+          <div class="phone-section-title">أحدث الإصدارات</div><div class="poster-row small"><i></i><i></i><i></i></div>
+          <div class="phone-bottom"><b><Library size={10}/>الرئيسية</b><b><Tv size={10}/>المسلسلات</b><b><Film size={10}/>الأفلام</b><b><Star size={10}/>الأنمي</b></div>
+        </div>
+        <div class="floating-stat stat-a"><span class="stat-icon"><Zap size={14}/></span><strong data-i18n="statFast">سريع ومستقر</strong><small data-i18n="statFastText">أداء محسّن للتصفح والمشاهدة</small></div>
+        <div class="floating-stat stat-b"><span class="stat-icon"><ShieldCheck size={14}/></span><strong data-i18n="statSecure">آمن ومرن</strong><small data-i18n="statSecureText">إعدادات ومصادر متعددة</small></div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll"><span data-i18n="scroll">مرّر لاكتشاف CineStream</span><ArrowUpLeft size={14}/></div>
+</section>
+
+<section class="section features-section" id="features">
+  <div class="wrap">
+    <div class="section-heading section-title">
+      <span class="section-kicker" data-i18n="features">المميزات</span>
+      <h2 data-i18n="featuresTitle">مصمم حول ما تشاهده فعلًا</h2>
+      <p data-i18n="featuresText">المميزات التالية مبنية على ما يظهر فعليًا داخل تطبيق CineStream، وليست مجرد وعود تسويقية.</p>
+    </div>
+    <div class="feature-grid">
+      <article class="feature-card featured" data-reveal><span class="icon-tile"><Film size={23}/></span><span class="number">01</span><h3 data-i18n="f1">أفلام ومسلسلات وأنمي</h3><p data-i18n="f1t">المسارات الأساسية للمحتوى موجودة مباشرة في التجربة الرئيسية.</p></article>
+      <article class="feature-card" data-reveal><span class="icon-tile"><Search size={23}/></span><span class="number">02</span><h3 data-i18n="f2">بحث عن المحتوى</h3><p data-i18n="f2t">ابحث عن الأفلام والمسلسلات واستكشف نتائجك بسرعة.</p></article>
+      <article class="feature-card" data-reveal><span class="icon-tile"><Globe2 size={23}/></span><span class="number">03</span><h3 data-i18n="f3">اختيار المصادر</h3><p data-i18n="f3t">عند توفر أكثر من مصدر، يمكن اختيار المصدر المناسب للعمل.</p></article>
+      <article class="feature-card" data-reveal><span class="icon-tile"><Settings2 size={23}/></span><span class="number">04</span><h3 data-i18n="f4">الجودة والتحكم</h3><p data-i18n="f4t">اختيار الجودة جزء من تجربة التشغيل والتنزيل.</p></article>
+      <article class="feature-card" data-reveal><span class="icon-tile"><CloudDownload size={23}/></span><span class="number">05</span><h3 data-i18n="f5">التنزيلات</h3><p data-i18n="f5t">تنزيل المحتوى وإدارته ومتابعة حالة التنزيل من داخل التطبيق.</p></article>
+      <article class="feature-card" data-reveal><span class="icon-tile"><Library size={23}/></span><span class="number">06</span><h3 data-i18n="f6">المكتبة والسجل</h3><p data-i18n="f6t">المكتبة والمفضلة والتاريخ ومتابعة المشاهدة في مكان واحد.</p></article>
+      <article class="feature-card" data-reveal><span class="icon-tile"><Users size={23}/></span><span class="number">07</span><h3 data-i18n="f7">المجتمع والمشاركة</h3><p data-i18n="f7t">التطبيق يحتوي على مسارات اجتماعية ومشاركة ونقل بين الأجهزة.</p></article>
+      <article class="feature-card" data-reveal><span class="icon-tile"><Sparkles size={23}/></span><span class="number">08</span><h3 data-i18n="f8">إضافات وتحديثات</h3><p data-i18n="f8t">إشعارات، تحديثات، وإضافات لتوسيع تجربة التطبيق.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="section experience-section" id="experience">
+  <div class="wrap">
+    <div class="section-heading section-title">
+      <span class="section-kicker" data-i18n="experience">تجربة التطبيق</span>
+      <h2 data-i18n="experienceTitle">من الاكتشاف إلى المشاهدة في مسار واحد</h2>
+      <p data-i18n="experienceText">بنية الصفحة الرئيسية في التطبيق مبنية على الاكتشاف المستمر: متابعة ما بدأت، معرفة الرائج، استكشاف الجديد ثم الانتقال إلى التفاصيل والتشغيل.</p>
+    </div>
+    <div class="experience-layout">
+      <div class="experience-copy">
+        <div class="timeline-card" data-reveal><span class="timeline-icon"><History size={20}/></span><div><b data-i18n="watching">متابعة المشاهدة</b><p data-i18n="watchingText">ارجع بسهولة إلى ما توقفت عنده.</p></div></div>
+        <div class="timeline-card" data-reveal><span class="timeline-icon"><Sparkles size={20}/></span><div><b data-i18n="trending">رائج الآن</b><p data-i18n="trendingText">تعرف على المحتوى الرائج اليوم.</p></div></div>
+        <div class="timeline-card" data-reveal><span class="timeline-icon"><Zap size={20}/></span><div><b data-i18n="newReleases">أحدث الإصدارات</b><p data-i18n="newReleasesText">تابع أحدث الإضافات إلى المكتبة.</p></div></div>
+        <div class="timeline-card" data-reveal><span class="timeline-icon"><Clock3 size={20}/></span><div><b data-i18n="upcoming">قريبًا</b><p data-i18n="upcomingText">اكتشف الأعمال القادمة قبل وصولها.</p></div></div>
+      </div>
+      <div class="experience-canvas" data-reveal>
+        <div class="canvas-backdrop" style={`background-image:url(${asset('app-assets/studio.jpg')})`}></div>
+        <div class="floating-screen screen-1"><div class="screen-header"><b>الرائج الآن</b><span>عرض الكل</span></div><div class="poster-line"><i></i><i></i><i></i><i></i></div><div class="screen-meta"><span>أفلام</span><span>مسلسلات</span><span>أنمي</span></div></div>
+        <div class="floating-screen screen-2"><div class="screen-header"><b>متابعة المشاهدة</b><History size={14}/></div><div class="wide-thumb" style={`background-image:url(${asset('app-assets/app.jpg')})`}><span>43%</span></div><div class="progress-line"><span></span></div></div>
+        <div class="floating-screen screen-3"><div class="screen-header"><b>أحدث الإصدارات</b><Sparkles size={14}/></div><div class="poster-line compact"><i></i><i></i><i></i></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section content-section">
+  <div class="wrap">
+    <div class="section-heading section-title">
+      <span class="section-kicker" data-i18n="contentKicker">المحتوى</span>
+      <h2 data-i18n="contentTitle">ثلاثة مسارات واضحة للمحتوى</h2>
+      <p data-i18n="contentText">الأفلام، المسلسلات، والأنمي هي الأساس الذي تنظم حوله شاشة CineStream الرئيسية.</p>
+    </div>
+    <div class="content-grid">
+      <article class="content-card movies" data-reveal><div class="content-image" style={`background-image:url(${asset('app-assets/cinema.jpg')})`}></div><div class="content-overlay"></div><div class="content-copy"><span class="content-icon"><Film size={20}/></span><h3 data-i18n="movies">الأفلام</h3><p data-i18n="movieDesc">أحدث الأفلام والمحتوى الرائج ضمن مسار مستقل.</p><a href="#download" class="text-link"><span data-i18n="discover">اكتشف التجربة</span><ArrowUpLeft size={15}/></a></div></article>
+      <article class="content-card series" data-reveal><div class="content-image" style={`background-image:url(${asset('app-assets/studio.jpg')})`}></div><div class="content-overlay"></div><div class="content-copy"><span class="content-icon"><Tv size={20}/></span><h3 data-i18n="series">المسلسلات</h3><p data-i18n="seriesDesc">مسارات للمسلسلات مع تفاصيل المواسم والحلقات.</p><a href="#download" class="text-link"><span data-i18n="discover">اكتشف التجربة</span><ArrowUpLeft size={15}/></a></div></article>
+      <article class="content-card anime" data-reveal><div class="content-image" style={`background-image:url(${asset('app-assets/app.jpg')})`}></div><div class="content-overlay"></div><div class="content-copy"><span class="content-icon"><Star size={20}/></span><h3 data-i18n="anime">الأنمي</h3><p data-i18n="animeDesc">مسار مستقل لاكتشاف الأنمي ضمن واجهة التطبيق.</p><a href="#download" class="text-link"><span data-i18n="discover">اكتشف التجربة</span><ArrowUpLeft size={15}/></a></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="section why-section">
+  <div class="wrap why-wrap">
+    <div class="why-copy section-title" data-reveal>
+      <span class="section-kicker" data-i18n="whyKicker">لماذا CineStream؟</span>
+      <h2 data-i18n="whyTitle">واجهة تفكر بالمحتوى قبل أي شيء</h2>
+      <p data-i18n="whyText">الهدف من تصميم التطبيق هو تقليل الطريق بين ما تريد مشاهدته وبين لحظة تشغيله، مع أدوات واضحة للمكتبة والتنزيل والمشاركة.</p>
+      <div class="why-badges"><span><Check size={14}/> <b data-i18n="whyBadge1">اكتشاف سريع</b></span><span><Check size={14}/> <b data-i18n="whyBadge2">تحكم واضح</b></span><span><Check size={14}/> <b data-i18n="whyBadge3">تجربة Android</b></span></div>
+    </div>
+    <div class="why-grid">
+      <article data-reveal><span class="icon-tile"><Search size={22}/></span><h3 data-i18n="why1">اكتشاف المحتوى</h3><p data-i18n="why1t">رائج، جديد، شهير، وقادم قريبًا في مسار واضح.</p></article>
+      <article data-reveal><span class="icon-tile"><Settings2 size={22}/></span><h3 data-i18n="why2">تفاصيل وتحكم</h3><p data-i18n="why2t">معلومات العمل، المواسم، الحلقات، المصادر والجودة.</p></article>
+      <article data-reveal><span class="icon-tile"><Play size={22}/><span class="mini-dot"></span></span><h3 data-i18n="why3">المشاهدة والتنزيل</h3><p data-i18n="why3t">تشغيل وتنزيل وإدارة المحتوى ضمن التجربة نفسها.</p></article>
+      <article data-reveal><span class="icon-tile"><Library size={22}/></span><h3 data-i18n="why4">المكتبة والتاريخ</h3><p data-i18n="why4t">احتفظ بما تفضله وتابع تقدمك ومشاهداتك السابقة.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="section download-section" id="download">
+  <div class="download-backdrop"></div>
+  <div class="wrap download-grid">
+    <div class="download-device" data-reveal>
+      <div class="device-showcase">
+        <div class="showcase-glow"></div>
+        <div class="device device-large">
+          <div class="phone-notch"></div>
+          <div class="device-photo" style={`background-image:url(${asset('app-assets/app.jpg')})`}></div>
+          <div class="device-brand"><img src={asset('favicon.svg')} alt="" width="30" height="30"/><b>Cine<span>Stream</span></b></div>
+        </div>
+      </div>
+    </div>
+    <div class="download-copy" data-reveal>
+      <span class="section-kicker" data-i18n="downloadKicker">تحميل التطبيق</span>
+      <h2 data-i18n="downloadTitle">خذ CineStream معك أينما كنت</h2>
+      <p data-i18n="downloadText">النسخة الحالية من التطبيق تستهدف Android وتبدأ من Android 7.0، مع تجربة مصممة للمحتوى والاكتشاف والتنزيلات.</p>
+      <div class="download-meta">
+        <div><b data-i18n="metaVersion">الإصدار</b><strong>1.0</strong></div>
+        <div><b data-i18n="metaSdk">الحد الأدنى</b><strong>Android 7.0+</strong></div>
+        <div><b data-i18n="metaTarget">Target SDK</b><strong>36</strong></div>
+        <div><b data-i18n="metaCode">Version Code</b><strong>1</strong></div>
+      </div>
+      <div class="download-actions"><a href="#" class="btn btn-primary btn-lg disabled" aria-disabled="true"><Download size={18}/><span data-i18n="downloadSoon">رابط التحميل سيضاف هنا</span></a><div class="qr-placeholder"><div class="qr-grid">{Array.from({length:64}).map((_,i)=><span class:list={{on:i%3===0||i%5===0||i%7===0}}></span>)}</div><span data-i18n="qr">رمز QR للتحميل</span></div></div>
+      <small class="download-note"><WifiOff size={14}/><span data-i18n="downloadNote">يمكن إضافة رابط APK الحقيقي لاحقًا من ملف إعداد واحد.</span></small>
+    </div>
+  </div>
+</section>
+
+<section class="section faq-section" id="faq">
+  <div class="wrap">
+    <div class="section-heading section-title">
+      <span class="section-kicker" data-i18n="faq">الأسئلة الشائعة</span>
+      <h2 data-i18n="faqTitle">أسئلة واضحة قبل التحميل</h2>
+      <p data-i18n="faqText">إجابات قصيرة مبنية على ما هو موجود في تطبيق CineStream ومشروعه الحالي.</p>
+    </div>
+    <div class="faq-grid">
+      {[
+        ['q1','a1'],['q2','a2'],['q3','a3'],['q4','a4'],['q5','a5'],['q6','a6']
+      ].map(([q,a], index) => <details class="faq-item" data-reveal open={index===0}>
+        <summary><span data-i18n={q}></span><ChevronDown size={18}/></summary>
+        <p data-i18n={a}></p>
+      </details>)}
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-top">
+    <div class="footer-brand"><img src={asset('logo.svg')} alt="CineStream" width="190" height="44"/><p data-i18n="tagline">عالم الترفيه بين يديك</p></div>
+    <nav><a href="#home" data-i18n="home">الرئيسية</a><a href="#features" data-i18n="features">المميزات</a><a href="#experience" data-i18n="experience">تجربة التطبيق</a><a href="#download" data-i18n="download">تحميل</a><a href="#faq" data-i18n="faq">الأسئلة الشائعة</a></nav>
+    <div class="footer-social"><a href="#" aria-label="YouTube"><Send size={17}/></a><a href="#" aria-label="GitHub"><Github size={17}/></a><a href="#" aria-label="Community"><Users size={17}/></a></div>
+  </div>
+  <div class="wrap footer-bottom"><span>© CineStream</span><span data-i18n="rights">جميع الحقوق محفوظة.</span></div>
+</footer>
+
+<script is:inline>
+const menu=document.getElementById('menu-btn');
+const mobile=document.getElementById('mobile-menu');
+menu?.addEventListener('click',()=>{
+  const open=mobile?.hidden ?? true;
+  document.dispatchEvent(new CustomEvent('cine:menu',{detail:{open,source:menu}}));
+});
+document.querySelectorAll('#mobile-menu a').forEach(a=>a.addEventListener('click',()=>{
+  document.dispatchEvent(new CustomEvent('cine:menu',{detail:{open:false,source:menu}}));
+}));
+document.addEventListener('pointerdown',(event)=>{
+  if(!mobile || mobile.hidden) return;
+  const target=event.target;
+  if(!(target instanceof Node)) return;
+  if(mobile.contains(target) || menu?.contains(target)) return;
+  document.dispatchEvent(new CustomEvent('cine:menu',{detail:{open:false,source:menu}}));
+});
+document.getElementById('theme-btn')?.addEventListener('click',(event)=>{
+  const next=document.documentElement.dataset.theme==='light'?'dark':'light';
+  document.dispatchEvent(new CustomEvent('cine:theme-request',{detail:{theme:next,source:event.currentTarget}}));
+});
+document.getElementById('lang-btn')?.addEventListener('click',(event)=>{
+  const next=document.documentElement.lang==='ar'?'en':'ar';
+  document.dispatchEvent(new CustomEvent('cine:language-request',{detail:{language:next,source:event.currentTarget}}));
+});
+document.querySelectorAll('.faq-item').forEach(d=>d.addEventListener('toggle',()=>{if(d.open){document.querySelectorAll('.faq-item[open]').forEach(other=>{if(other!==d)other.open=false})}}));
+</script>
+<script src="../scripts/motion.ts"></script>
+</BaseLayout>
